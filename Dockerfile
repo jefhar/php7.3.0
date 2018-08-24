@@ -3,7 +3,7 @@
 #####
 
 FROM ubuntu:bionic as build
-ENV PHP_VERSION php-7.3.0beta1
+ENV PHP_VERSION php-7.3.0beta2
 ENV CONF_DIR /etc/php/7.3/conf.d
 WORKDIR /php/source
 COPY 118BCCB6.pub 118BCCB6.pub
