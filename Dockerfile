@@ -1,9 +1,9 @@
 #####
-# PHP 7.3.0Beta 1 CLI Image #
+# PHP 7.3.0Beta 3 CLI Image #
 #####
 
 FROM ubuntu:bionic as build
-ENV PHP_VERSION php-7.3.0beta2
+ENV PHP_VERSION php-7.3.0beta3
 ENV CONF_DIR /etc/php/7.3/conf.d
 WORKDIR /php/source
 COPY 118BCCB6.pub 118BCCB6.pub
