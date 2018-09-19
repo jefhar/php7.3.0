@@ -3,7 +3,7 @@
 #####
 
 FROM ubuntu:bionic as build
-ENV PHP_VERSION php-7.3.0beta3
+ENV PHP_VERSION php-7.3.0RC1
 ENV CONF_DIR /etc/php/7.3/conf.d
 WORKDIR /php/source
 COPY 118BCCB6.pub 118BCCB6.pub
@@ -115,21 +115,21 @@ RUN  apt-get update \
     && echo "; priority=20\nextension=tokenizer.so" > $CONF_DIR/tokenizer.ini \
     && mv /php/source/$PHP_VERSION/php.ini-production /etc/php/7.3/cli/php.ini \
     && apt-get remove -y \
-		bison \
-        build-essential \
-        libbz2-dev \
-        libcurl4-openssl-dev \
-        libfreetype6-dev \
-        libjpeg-dev \
-        libpng-dev \
-        libpspell-dev \
-        libreadline-dev \
-        libsodium-dev \
-        libssl-dev \
-        libwebp-dev \
-        libxml2-dev \
-        libxpm-dev \
-        libzip-dev \
+       bison \
+       build-essential \
+       libbz2-dev \
+       libcurl4-openssl-dev \
+       libfreetype6-dev \
+       libjpeg-dev \
+       libpng-dev \
+       libpspell-dev \
+       libreadline-dev \
+       libsodium-dev \
+       libssl-dev \
+       libwebp-dev \
+       libxml2-dev \
+       libxpm-dev \
+       libzip-dev \
 	&& apt-get autoremove -y \
 	&& rm -rf /var/lib/apt/lists/* \
 	&& rm -rf /php/source/php*
